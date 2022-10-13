@@ -1,21 +1,31 @@
+import java.util.ArrayList;
 public class Book {
-    private String name;
-    private String content;
-    public Book(String n){
-        this.name = n;
-        this.content = "";
-    }
-    public void createNewParagraph(String p){
-        this.content += p + "\n";
-    }
-    public void createNewImage(String i){
-        this.content += i + "\n";
-    }
-    public void createNewTable(String t){
-        this.content += t + "\n";
-    }
-    public void print(){
-        System.out.println(this.content);
+    private String title;
+    private Author author;
+    private ArrayList<Chapter> chapters;
+
+    public Book(String t){
+        this.title = t;
+        chapters = new ArrayList<Chapter>();
     }
 
+    public void addAuthor(Author a){
+        this.author = a;
+    }
+
+    public int createChapter(String titleChapter) {
+        chapters.add(new Chapter(titleChapter));
+        return (chapters.size() - 1);
+    }
+
+    public Chapter getChapter(int indexChapter) {
+        return chapters.get(indexChapter);
+    }
+
+    public void print(){
+        for(Chapter chapter : chapters){
+            chapter.print();
+        }
+    }
 }
+
