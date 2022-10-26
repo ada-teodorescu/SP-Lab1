@@ -1,6 +1,6 @@
 public class TableOfContents {
 
-    public void print() {
+    public void print(){
         System.out.println("TableOfContents");
     }
 }
