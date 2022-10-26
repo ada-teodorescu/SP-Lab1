@@ -1,5 +1,5 @@
-public class Image implements Element {
-    private String imageName;
+public class Image extends AbstractElement {
+    private final String imageName;
 
     public Image(String im){
         this.imageName = im;

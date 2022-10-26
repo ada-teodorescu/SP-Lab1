@@ -1,11 +1,11 @@
 public class Author {
-    private String name;
+    private final String name;
 
-    public Author(String n){
-        this.name = n;
+    public Author(String fullName){
+        this.name = fullName;
     }
 
     public void print(){
-        System.out.println(this.name);
+        System.out.println("Author: " + this.name);
     }
 }

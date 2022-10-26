@@ -1,6 +1,8 @@
-public class TableOfContents {
+public class TableOfContents extends AbstractElement {
+
+    private final String something = "TableOfContents";
 
     public void print(){
-        System.out.println("TableOfContents");
+        System.out.println(something);
     }
 }
